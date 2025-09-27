@@ -1,0 +1,96 @@
+/* style.css */
+
+/* Container for the popup */
+.realestate-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    max-width: 90%;
+    width: auto;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height: 80vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+/* Show state */
+.realestate-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Heading */
+.realestate-popup h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Form Styles */
+.realestate-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.realestate-popup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.realestate-popup input[type="range"],
+.realestate-popup input[type="number"],
+.realestate-popup select,
+.realestate-popup textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.realestate-popup button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.realestate-popup button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Close Button */
+#closePopup {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .realestate-popup {
+        bottom: 10px;
+        right: 10px;
+        width: 90%;
+    }
+}
